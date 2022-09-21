@@ -1,0 +1,7 @@
+/.vscode
+__pycache__/
+lib/
+venv/
+
+credentials.py
+/trie.hickle

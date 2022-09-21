@@ -1,0 +1,1 @@
+To use create python module "credentials.py" with variables email and password.
