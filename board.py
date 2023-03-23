@@ -58,7 +58,7 @@ class Board:
         self._current_word.append(self.letters[x][y], Coords(x, y))
         self.used_letters[x][y] = True
 
-        if self.trie.is_word(self._current_word.get_word()):
+        if self.trie.is_word(self._current_word.get_word()) and self._current_word.length() >= 3:
             self.words.append(deepcopy(self._current_word))
 
         for y_dir in [-1, 0, 1]:

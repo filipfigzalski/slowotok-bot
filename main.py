@@ -3,6 +3,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 import os.path
 import hickle
@@ -31,7 +32,9 @@ input("Press enter to continue...")
 
 while True:
     # Creating the driver
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    chrome_options = ChromeOptions()
+    # chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
     driver.implicitly_wait(2)
 
     # Opening the game.
